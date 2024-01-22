@@ -32,7 +32,9 @@ You're able to do this because when the service is created a DNS entry is added 
 
 **Kubectl commands**
 
-- Command to list all the PODS in the _default_ namespace.`kubectl get pods`. To list Pods in another namespace, use the _namespace_ option in the command along with the name of the namespace `kubectl get pods --namespace=kube-system`
+- Command to list all namespaces: `kubectl get namespaces` or `kubectl get ns`
+
+- Command to list all the PODS in the _default_ namespace.`kubectl get pods`. To list Pods in another namespace, use the _namespace_ option in the command along with the name of the namespace `kubectl get pods --namespace=kube-system` or `kubectl get pods -n=kube-system`
 
 - Command to create a pod, same as the case of listing, we can use the _namespace_ option to specify an specific namespace. `kubectl create -f pod-definition.yaml --namespace=dev`. If we want that the Pod is always created in that namespace even if we don't specify it in the command line, we can move namespace definition file. (see file _pod-deifinition.yaml_)
   This is a good way to ensure your resources are always created in the same namespace
@@ -52,7 +54,7 @@ After that we can simply run the `kubectl get pods` and will return the pods bel
 
 In case we want to see the Pods in all namespaces we can use the option _all-namespaces_ option int the command line
 
-`kubectl get pods --all-namespaces`
+`kubectl get pods --all-namespaces` or `kubectl get pods -A`
 
 ### Resource Quota
 
