@@ -10,4 +10,4 @@ Same as other objects, we need to create a deployment deifinition file. Its cont
 
 To create the deploymnet we need to run `kubectl create -f deployment-definition.yaml`
 
-It will create a deployment (`kubectl get deployments`). Alos it will create replica sets (`kubectl get deployments`) in the name of the deployment. And also, it will create pods (`kubectl get pods`) in its name. There we can see that the deployment is in the higher place. To see all the objects toghether we can run the `kubectl get all` command
+It will create a deployment (`kubectl get deployments`). Additionally, it will generate replica sets (`kubectl get deployments`) under the deployment's name. Furthermore, it will create pods (`kubectl get pods`) using the same name. Here, we can observe that the deployment holds a higher-level position. To view all the objects together, we can execute the `kubectl get all` command.
